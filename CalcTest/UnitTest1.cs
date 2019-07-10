@@ -44,5 +44,18 @@ namespace CalcTest
             long actual = challenger.MultiplyTwoNumbers(factor1, factor2);
             Assert.Equal(expectedSum, actual);
         }
+
+        [Theory]
+        [InlineData(1,0.5,2)]
+        [InlineData(13,6,2.17)]
+        [InlineData(20,2,10)]
+        [InlineData(-5,1,-5)]
+        [InlineData(45,10,4.5)]
+        public void DivideTwoNumbers(decimal denominator, decimal numerator, decimal expectedSum)
+        {
+            Calculator challenger = new Calculator();
+            decimal actual = challenger.DivideTwoNumbers(denominator, numerator);
+            Assert.Equal(expectedSum, actual);
+        }
     }
 }
