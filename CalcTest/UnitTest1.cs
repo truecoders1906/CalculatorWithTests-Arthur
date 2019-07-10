@@ -57,5 +57,18 @@ namespace CalcTest
             decimal actual = challenger.DivideTwoNumbers(denominator, numerator);
             Assert.Equal(expectedSum, actual);
         }
+
+        [Theory]
+        [InlineData(1,1)]
+        [InlineData(2,2)]
+        [InlineData(3,6)]
+        [InlineData(4,24)]
+        [InlineData(5,120)]
+        public void FindTheFactorial(int number, int expectedSum)
+        {
+            Calculator challenger = new Calculator();
+            int actual = challenger.FindTheFactorial(number);
+            Assert.Equal(expectedSum, actual);
+        }
     }
 }
