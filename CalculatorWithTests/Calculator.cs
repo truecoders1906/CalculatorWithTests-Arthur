@@ -1,7 +1,7 @@
-﻿
+﻿using System;
 namespace CalculatorWithTests
 {
-    class Calculator
+    public class Calculator
     {
         public int AddTwoNumbers(int num1, int num2)
         {
