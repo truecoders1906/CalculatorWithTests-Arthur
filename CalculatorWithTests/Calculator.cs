@@ -5,27 +5,34 @@ namespace CalculatorWithTests
     {
         public int AddTwoNumbers(int num1, int num2)
         {
-            throw new NotImplementedException();
+            return num1 + num2;
         }
 
         public double SubtractTwoNumbers(double minuend, double subtrahend)
         {
-            throw new NotImplementedException();
+            return minuend - subtrahend;
         }
 
         public long MultiplyTwoNumbers(long factor1, long factor2)
         {
-            throw new NotImplementedException();
+            return factor1 * factor2;
         }
 
         public decimal DivideTwoNumbers(decimal denominator, decimal numerator)
         {
-            throw new NotImplementedException();
+            return denominator / numerator;
         }
 
-        public double FindTheFactorial(int number)
+        public int FindTheFactorial(int number)
         {
-            throw new NotImplementedException();
+                if (number <= 1)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return number * FindTheFactorial(number - 1);
+                }
         }
     }
 }
