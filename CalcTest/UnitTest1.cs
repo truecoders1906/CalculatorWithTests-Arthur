@@ -31,5 +31,18 @@ namespace CalcTest
             double actual = challenger.SubtractTwoNumbers(minuend, subtrahend);
             Assert.Equal(expectedSum, actual);
         }
+
+        [Theory]
+        [InlineData(2,4,8)]
+        [InlineData(13,6,78)]
+        [InlineData(-9,12,-108)]
+        [InlineData(-1,-1,1)]
+        [InlineData(420,0,0)]
+        public void MultiplyTwoNumbers(long factor1, long factor2, long expectedSum)
+        {
+            Calculator challenger = new Calculator();
+            long actual = challenger.MultiplyTwoNumbers(factor1, factor2);
+            Assert.Equal(expectedSum, actual);
+        }
     }
 }
